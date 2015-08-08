@@ -3,7 +3,7 @@ $(function(){
   
   var Ranking = Backbone.Collection.extend({
     model: Position,
-    url: '/wss_ranking/data/ranking.json'
+    url: '/data/ranking.json'
   });
 
   ranking = new Ranking;
