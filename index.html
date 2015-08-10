@@ -86,7 +86,9 @@
     <script src="js/app.js"></script>
     <script>
       $(function(){
-        list = new App.Views.List({collection: men});
+        App.init({
+          gender: 'men'
+        })
       });
     </script>
   </body>
