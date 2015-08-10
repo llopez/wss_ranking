@@ -4,9 +4,12 @@ window.App = {
   Views: {},
   init: function(options){
     if(options.gender == 'men')
-      new App.Views.List({collection: men});
+      list = new App.Views.List({collection: men});
     else
-      new App.Views.List({collection: women});
+      list = new App.Views.List({collection: women});
+
+    new App.Views.Search;
+
   }
 }
 
@@ -63,6 +66,5 @@ App.Views.Search = Backbone.View.extend({
 $(function(){
   men = new App.Collections.MenRanking();
   women = new App.Collections.WomenRanking();
-  search = new App.Views.Search;
 });
 
