@@ -3,13 +3,42 @@ use Rack::Static,
   :root => "public"
 
 run lambda { |env|
-  [
-    200,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => 'public, max-age=86400'
-    },
-    File.open('public/index.html', File::RDONLY)
-  ]
+  if env['REQUEST_PATH'] == '/'
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/index.html', File::RDONLY)
+    ]
+  elsif env['REQUEST_PATH'] == '/men'
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/index.html', File::RDONLY)
+    ]
+  elsif env['REQUEST_PATH'] == '/women'
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/women.html', File::RDONLY)
+    ]
+  else
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      ["404 not found :("]
+    ]
+  end
 }
 
