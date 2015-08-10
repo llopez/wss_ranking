@@ -2,8 +2,11 @@ window.App = {
   Models: {},
   Collections: {},
   Views: {},
-  init: function(){
-    // init
+  init: function(options){
+    if(options.gender == 'men')
+      new App.Views.List({collection: men});
+    else
+      new App.Views.List({collection: women});
   }
 }
 

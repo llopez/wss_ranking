@@ -71,7 +71,9 @@
     <script src="js/app.js"></script>
     <script>
       $(function(){
-        list = new App.Views.List({collection: women});
+        App.init({
+          gender: 'women'      
+        })
       });
     </script>
   </body>
