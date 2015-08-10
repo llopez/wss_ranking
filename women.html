@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <meta name="description" content="World Slalom Series Ranking is a site where every skater can check his ranking">
-    <meta name="author" content="Luis Lopez">
-    <meta name="keywords" content="world slalom series, ranking, slalom, rollers, buenos aires, argentina, inline skating, roller skating, query ranking, query position">
-
-    <title>World Slalom Series Ranking</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,22 +18,12 @@
     <![endif]-->
   </head>
   <body>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-66129875-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
     <div class="container">
       <div class='row'>
         <h1>World Slalom Series Ranking</h1>
         <ul class="nav nav-pills">
-          <li role="presentation" class="active"><a href="/">Men</a></li>
-          <li role="presentation"><a href="/women">Women</a></li>
+          <li role="presentation"><a href="/">Men</a></li>
+          <li role="presentation" class="active"><a href="/women">Women</a></li>
         </ul>
       </div>
       <br>
@@ -86,7 +71,7 @@
     <script src="js/app.js"></script>
     <script>
       $(function(){
-        list = new App.Views.List({collection: men});
+        list = new App.Views.List({collection: women});
       });
     </script>
   </body>
