@@ -22,10 +22,10 @@
       <div class='row'>
         <h1>World Slalom Series Ranking</h1>
         <ul class="nav nav-pills">
-          <li role="presentation" class="active"><a href="/">Men</a></li>
+          <li role="presentation"><a href="/">Men</a></li>
           <li role="presentation"><a href="/women">Women</a></li>
-          <li role="presentation"><a href="/argentina">Argentina</a></li>
-      </ul>
+          <li role="presentation" class='active'><a href="/argentina">Argentina</a></li>
+        </ul>
       </div>
       <br>
       <div class="row">
@@ -73,7 +73,8 @@
     <script>
       $(function(){
         App.init({
-          gender: 'men'      
+          gender: 'men',
+          country: 'ARG'      
         })
       });
     </script>
