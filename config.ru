@@ -30,14 +30,23 @@ run lambda { |env|
       },
       File.open('public/women.html', File::RDONLY)
     ]
-  elsif env['REQUEST_PATH'] == '/argentina'
+  elsif env['REQUEST_PATH'] == '/argentina/men'
     [
       200,
       {
         'Content-Type'  => 'text/html',
         'Cache-Control' => 'public, max-age=86400'
       },
-      File.open('public/argentina.html', File::RDONLY)
+      File.open('public/argentina/men.html', File::RDONLY)
+    ]
+  elsif env['REQUEST_PATH'] == '/argentina/women'
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/argentina/women.html', File::RDONLY)
     ]
   else
     [
