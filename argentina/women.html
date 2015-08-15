@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>World Slalom Series Ranking</title>
-    
+
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,11 +22,11 @@
       <div class='row'>
         <h1>World Slalom Series Ranking</h1>
         <ul class="nav nav-pills">
-          <li role="presentation" class="active"><a href="/">Men</a></li>
+          <li role="presentation"><a href="/">Men</a></li>
           <li role="presentation"><a href="/women">Women</a></li>
           <li role="presentation"><a href="/argentina/men">Argentine Men</a></li>
-          <li role="presentation"><a href="/argentina/women">Argentine Women</a></li>
-      </ul>
+          <li role="presentation" class="active"><a href="/argentina/women">Argentine Women</a></li>
+        </ul>
       </div>
       <br>
       <div class="row">
@@ -74,7 +74,8 @@
     <script>
       $(function(){
         App.init({
-          gender: 'men'      
+          gender: 'women',
+          country: 'ARG'      
         })
       });
     </script>
