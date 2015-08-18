@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>World Slalom Series Ranking</title>
+    
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class='row'>
+        <h1>World Slalom Series Ranking</h1>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a href="/">Men</a></li>
+          <li role="presentation"><a href="/women">Women</a></li>
+          <li role="presentation"><a href="/argentina/men">Argentine Men</a></li>
+          <li role="presentation"><a href="/argentina/women">Argentine Women</a></li>
+      </ul>
+      </div>
+      <br>
+      <div class="row">
+        <form class="form-horizontal" id='search'>
+          <div class="form-group">
+            <div class='col-md-12'>
+              <input type="text" class="form-control" id="name" placeholder="type name" autocomplete="off">
+            </div>
+          </div>
+        </form>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Skater ID</th>
+              <th>Name</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type='text/html' id="item-template">
+      <tr>
+        <td><%= id %></td>
+        <td><%= name %></td>
+        <td><%= country %></td>
+      </tr>
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/underscore.min.js"></script>
+    <script src="/js/backbone.min.js"></script>
+    <script src="/js/skaters.js"></script>
+    <script>
+      $(function(){
+        App.init();
+      });
+    </script>
+  </body>
+</html>
+
