@@ -1,3 +1,5 @@
+# pdftohtml -enc UTF-8 skaters-july-2015.pdf skaters-july-2015.html
+
 require 'json'
 
 file = File.open('public/data/skaters-july-2015.html')
